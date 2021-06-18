@@ -5,6 +5,7 @@ import PriorityScheduling from './components/PriorityScheduling';
 import FIFOScheduling from './components/FIFOScheduling';
 import QuantumScheduling from './components/QuantumScheduling';
 import RoundRobin from './components/RoundRobinScheduling';
+import Footer from './components/Footer';
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 						<Route path='/quantum-scheduling' component={QuantumScheduling} />
 						<Route path='/round-robin-scheduling' component={RoundRobin} />
 					</Switch>
+					<Footer />
 				</div>
 			</div>
 		</Router>
