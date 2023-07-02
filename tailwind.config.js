@@ -1,21 +1,18 @@
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
-module.exports = {
-	mode: 'jit',
-	purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
-	darkMode: false, // or 'media' or 'class'
+
+export default {
+	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
 			colors: {
-				'light-blue': colors.lightBlue,
-				primary: '#006989',
-				secondary: '#4C9F70',
-				tertiary: '#EAEBED',
+				primary: '#36413E',
+				secondary: '#5d5e60',
+				tertiary: '#8D8D92',
 				progress: '#FF2E00',
 			},
 		},
 	},
-	variants: {
-		extend: {},
-	},
 	plugins: [],
 };
+
