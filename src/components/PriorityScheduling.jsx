@@ -8,6 +8,8 @@ import {
 	delay,
 } from '../utils';
 import ProcessList from './ProcessList';
+import AddProcessButton from './AddProcessButton';
+import Scheduling from './Scheduling';
 
 export default function PriorityScheduling() {
 	const { PriorityQueue } = usePriorityQueue([]);
@@ -39,25 +41,14 @@ export default function PriorityScheduling() {
 		}
 	}, [PriorityQueue, inProgress]);
 
-	return (
-		<div className='mt-4'>
-			<h2 className='title'>Planificación por Prioridad</h2>
-			<button onClick={handleAddProcess} className='add-btn'>
-				Agregar proceso
-			</button>
-			<div className='flex w-full gap-x-2 mt-2'>
-				<ProcessList
-					list={PriorityQueue.queue}
-					title={'En espera'}
-					color='waiting'
-				/>
-				<ProcessList
-					list={inProgress}
-					title={'En proceso'}
-					color='in-progress'
-				/>
-				<ProcessList list={completed} title={'Completados'} color='completed' />
-			</div>
-		</div>
-	);
+	const config = {
+		title: 'Priority',
+		handleAddProcess,
+		pending: PriorityQueue.queue,
+		inProgress: inProgress[0],
+		completed,
+	};
+
+	return <Scheduling {...config} />;
 }
+

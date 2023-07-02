@@ -1,21 +1,27 @@
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
-module.exports = {
-	mode: 'jit',
-	purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
-	darkMode: false, // or 'media' or 'class'
+
+export default {
+	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
 			colors: {
-				'light-blue': colors.lightBlue,
-				primary: '#006989',
-				secondary: '#4C9F70',
-				tertiary: '#EAEBED',
-				progress: '#FF2E00',
+				primary: '#503C90',
+				secondary: '#302456',
+				tertiary: '#100C1D',
+				code: '#6A52B7',
 			},
+			keyframes: {
+				'step-rotate': {
+					to: { transform: 'rotate(360deg)' },
+				},
+			},
+			animation: {
+				'step-rotate': 'step-rotate 1s steps(10) infinite',
+			},
+			fontFamily: { mono: ['"Ubuntu Mono"'] },
 		},
-	},
-	variants: {
-		extend: {},
 	},
 	plugins: [],
 };
+
