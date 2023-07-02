@@ -1,4 +1,3 @@
-import './App.css';
 import {
 	BrowserRouter as Router,
 	Route,
@@ -11,12 +10,14 @@ import FIFOScheduling from './components/FIFOScheduling';
 import QuantumScheduling from './components/QuantumScheduling';
 import RoundRobin from './components/RoundRobinScheduling';
 import Footer from './components/Footer';
+import 'react-tooltip/dist/react-tooltip.css';
+import './App.css';
 
 function App() {
 	return (
 		<Router>
-			<div className='App h-screen flex flex-col justify-center items-center bg-black bg-opacity-10'>
-				<div className='w-[80%] max-w-6xl h-full max-h-[90%] bg-tertiary rounded-2xl shadow-2xl flex flex-col '>
+			<div className='h-screen flex flex-col justify-center'>
+				<div className='h-full w-full lg:h-4/5 bg-tertiary flex flex-col justify-between lg:max-w-4xl xl:max-w-6xl mx-auto px-4 pt-6 lg:rounded-lg'>
 					<Navbar />
 					<div className='flex-grow'>
 						<Routes>
@@ -34,7 +35,7 @@ function App() {
 							<Route path='/round-robin-scheduling' element={<RoundRobin />} />
 						</Routes>
 					</div>
-					<div className='px-4 pb-3.5 justify-self-end'>
+					<div className='mt-4 pb-4 justify-self-end'>
 						<Footer />
 					</div>
 				</div>

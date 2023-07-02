@@ -45,7 +45,7 @@ export default function PriorityScheduling() {
 		title: 'Priority',
 		handleAddProcess,
 		pending: PriorityQueue.queue,
-		inProgress,
+		inProgress: inProgress[0],
 		completed,
 	};
 

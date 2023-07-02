@@ -39,7 +39,7 @@ export default function QuantumScheduling() {
 		title: 'Time Quantum',
 		handleAddProcess,
 		pending: Queue.queue,
-		inProgress,
+		inProgress: inProgress[0],
 		completed,
 	};
 

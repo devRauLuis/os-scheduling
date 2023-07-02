@@ -38,7 +38,7 @@ export default function FIFOScheduling() {
 		title: 'FIFO',
 		handleAddProcess,
 		pending: Queue.queue,
-		inProgress,
+		inProgress: inProgress[0],
 		completed,
 	};
 

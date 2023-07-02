@@ -1,14 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Major+Mono+Display&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Ubuntu+Mono:wght@400;700&display=swap');
+
 body {
 	background-opacity: 0.35;
-	font-family: 'Ubuntu Mono', monospace;
-
-	/* font-family: 'Cutive Mono', monospace; */
-
-	/* font-family: 'Major Mono Display', monospace; */
+	font-family: 'Inter', sans-serif;
 	/* @apply bg-gradient-to-br from-primary to-secondary; */
-	@apply bg-gradient-to-br from-black to-gray-800;
+	@apply bg-gradient-to-br from-black to-gray-800 text-white;
 }
 .scrolling-wrapper {
 	-webkit-overflow-scrolling: touch;
@@ -19,7 +15,7 @@ body {
 }
 
 li > a {
-	@apply bg-primary text-white px-3 py-2 text-center font-semibold block rounded text-sm;
+	@apply bg-primary text-white px-2 py-1 text-center font-semibold block rounded text-sm;
 }
 
 li > a:hover {
@@ -37,7 +33,7 @@ li > a:focus {
 }
 
 button.add-btn {
-	@apply bg-primary rounded text-white font-semibold px-4 py-2 mt-2 mb-1.5 block w-full select-none;
+	@apply bg-primary rounded text-white font-semibold px-4 py-2 block w-full select-none;
 }
 
 button.add-btn:hover {
@@ -49,18 +45,14 @@ button.add-btn:focus {
 }
 
 h2.title {
-	@apply text-2xl font-black text-center text-gray-700 mt-4 mb-3;
+	@apply text-2xl font-black text-center text-white mt-2 mb-2;
 }
 
 .pending {
-	@apply bg-red-500;
-}
-
-.in-progress {
-	@apply bg-yellow-400;
+	@apply bg-amber-500;
 }
 
 .completed {
-	@apply bg-green-500;
+	@apply bg-emerald-500;
 }
 

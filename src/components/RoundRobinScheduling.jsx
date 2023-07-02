@@ -48,7 +48,7 @@ export default function RoundRobin() {
 		title: 'Round Robin',
 		handleAddProcess,
 		pending: Queue.queue,
-		inProgress,
+		inProgress: inProgress[0],
 		completed,
 	};
 
