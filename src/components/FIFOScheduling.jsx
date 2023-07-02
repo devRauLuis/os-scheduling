@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import useQueue from '../customHooks/useQueue';
 import { getRndNumber, getRndQuantum, processNames, delay } from '../utils';
 import ProcessList from './ProcessList';
+import AddProcessButton from './AddProcessButton';
+import Scheduling from './Scheduling';
 
 export default function FIFOScheduling() {
 	const { Queue } = useQueue([]);
@@ -32,17 +34,14 @@ export default function FIFOScheduling() {
 		}
 	}, [Queue, inProgress]);
 
-	return (
-		<div className='mt-4'>
-			<h2 className='title'>FIFO</h2>
-			<button onClick={handleAddProcess} className='add-btn'>
-				Agregar proceso
-			</button>
-			<div className='flex w-full gap-x-2 mt-2'>
-				<ProcessList list={Queue.queue} title={'En espera'} color='waiting' />
-				<ProcessList list={inProgress} title={'En proceso'} color='in-progress' />
-				<ProcessList list={completed} title={'Completados'} color='completed' />
-			</div>
-		</div>
-	);
+	const config = {
+		title: 'FIFO',
+		handleAddProcess,
+		pending: Queue.queue,
+		inProgress,
+		completed,
+	};
+
+	return <Scheduling {...config} />;
 }
+

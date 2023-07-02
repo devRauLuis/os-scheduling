@@ -7,7 +7,8 @@ body {
 	/* font-family: 'Cutive Mono', monospace; */
 
 	/* font-family: 'Major Mono Display', monospace; */
-	@apply bg-gradient-to-br from-primary to-secondary;
+	/* @apply bg-gradient-to-br from-primary to-secondary; */
+	@apply bg-gradient-to-br from-black to-gray-800;
 }
 .scrolling-wrapper {
 	-webkit-overflow-scrolling: touch;
@@ -51,7 +52,7 @@ h2.title {
 	@apply text-2xl font-black text-center text-gray-700 mt-4 mb-3;
 }
 
-.waiting {
+.pending {
 	@apply bg-red-500;
 }
 
@@ -62,3 +63,4 @@ h2.title {
 .completed {
 	@apply bg-green-500;
 }
+
